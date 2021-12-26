@@ -1,11 +1,16 @@
 import React from 'react'
 
-const index = () => {
+import { Heading, Container } from '@/components'
+
+const HomeModule = () => {
     return (
-        <div>
-            <p>Hello World</p>
-        </div>
+        <Container>
+            <div>
+                <Heading text='Contacts' />
+                <p>Hello World</p>
+            </div>
+        </Container>
     )
 }
 
-export default index
+export default HomeModule
