@@ -20,7 +20,7 @@ const ContactCard = ({
             } p-4 flex flex-col justify-between shadow-level-1 rounded`}
         >
             <p>
-                <span className='font-bold text-2xl'>{name}</span> - {username}
+                <span className='font-bold text-xl'>{name}</span> - {username}
             </p>
             <p className='text-sm text-gray-600 mt-6'>{email}</p>
         </div>
