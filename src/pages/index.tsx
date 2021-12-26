@@ -1,12 +1,10 @@
 import React from 'react'
 import type { NextPage } from 'next'
 
+import { HomeModule } from '@/modules'
+
 const index: NextPage = () => {
-    return (
-        <div className='text-center my-20'>
-            <p>Hello World</p>
-        </div>
-    )
+    return <HomeModule />
 }
 
 export default index
