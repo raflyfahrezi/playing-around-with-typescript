@@ -2,7 +2,15 @@ import React from 'react'
 
 import { Heading, Container } from '@/components'
 
-const HomeModule = () => {
+import type { ContactModel } from '@/models'
+
+type HomeModuleProps = {
+    contactList: ContactModel[]
+}
+
+const HomeModule = ({ contactList }: HomeModuleProps) => {
+    console.log(contactList)
+
     return (
         <Container>
             <div>
