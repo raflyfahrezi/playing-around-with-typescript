@@ -1,4 +1,4 @@
-interface ContactModel {
+type ContactModel = {
     id: number
     name: string
     email: string
