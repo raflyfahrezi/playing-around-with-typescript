@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 
-import { Head } from '@/layout'
+import { Head, Footer } from '@/layout'
 
 type pageWrapperProps = {
     title?: string
@@ -11,7 +11,8 @@ const PageWrapper = ({ title, children }: pageWrapperProps) => {
     return (
         <div>
             <Head title={title} />
-            {children}
+            <div>{children}</div>
+            <Footer />
         </div>
     )
 }
