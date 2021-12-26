@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Heading, Container } from '@/components'
+import { Heading, Container, ContactCard } from '@/components'
 
 import type { ContactModel } from '@/models'
 
@@ -9,13 +9,32 @@ type HomeModuleProps = {
 }
 
 const HomeModule = ({ contactList }: HomeModuleProps) => {
-    console.log(contactList)
-
     return (
         <Container>
             <div>
                 <Heading text='Contacts' />
-                <p>Hello World</p>
+                <div
+                    className='grid gap-6'
+                    style={{
+                        gridTemplateColumns:
+                            'repeat(auto-fill, minmax(270px, 1fr))',
+                    }}
+                >
+                    {contactList.map((item) => {
+                        const { id, name, email, username } =
+                            item as ContactModel
+
+                        return (
+                            <ContactCard
+                                key={id}
+                                name={name}
+                                email={email}
+                                username={username}
+                                fullWidth
+                            />
+                        )
+                    })}
+                </div>
             </div>
         </Container>
     )
