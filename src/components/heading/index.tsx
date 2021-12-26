@@ -6,8 +6,8 @@ type HeadingProps = {
 
 const Heading = ({ text }: HeadingProps) => {
     return (
-        <div>
-            <h1>{text}</h1>
+        <div className='w-full py-10 text-center'>
+            <h1 className='font-bold text-3xl'>{text}</h1>
         </div>
     )
 }
