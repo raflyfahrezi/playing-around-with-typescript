@@ -1,17 +1,15 @@
 import React from 'react'
 import axios from 'axios'
-import { GetStaticProps } from 'next'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+
+import type { NextPage } from 'next'
 
 import { HomeModule } from '@/modules'
 import { PageWrapper } from '@/layout'
 
-import type { ContactModel } from '@/models'
-
-type indexProps = {
-    contactList: ContactModel[]
-}
-
-const index = ({ contactList }: indexProps) => {
+const index: NextPage = ({
+    contactList,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <PageWrapper>
             <HomeModule contactList={contactList} />
