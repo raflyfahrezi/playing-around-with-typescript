@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react'
 import { Head } from '@/layout'
 
 type pageWrapperProps = {
-    title: string
+    title?: string
     children: ReactNode
 }
 
